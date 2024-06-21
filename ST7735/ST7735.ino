@@ -28,10 +28,11 @@ void setup() {
   Magnifier=1;
   First_Glyph=0;
 
-  Show ();
+  // Show ();
 }
 
 void loop() {
+  /*
   int16_t val;
   if(Serial.available()) {
     val= Serial.parseInt();
@@ -43,6 +44,11 @@ void loop() {
     while(Serial.available())  {Serial.read();};
     Show ();
   }
+  */
+  tft.fillScreen(ST7735_BLACK);
+
+  drawSymbol(102, 22, MY_DIAMOND_SUIT, ST7735_WHITE, ST7735_BLACK, 2);
+  
   delay(1000);
 }
 
