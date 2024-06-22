@@ -28,7 +28,7 @@ void setup() {
   Magnifier=1;
   First_Glyph=0;
 
-  // Show ();
+  //Show ();
 }
 
 void loop() {
@@ -45,9 +45,24 @@ void loop() {
     Show ();
   }
   */
+  
   tft.fillScreen(ST7735_BLACK);
+  drawSymbol(75, 24, MY_CLEAR, ST7735_YELLOW, ST7735_BLACK, 1);
 
-  drawSymbol(102, 22, MY_DIAMOND_SUIT, ST7735_WHITE, ST7735_BLACK, 2);
+  drawSymbol(16, 48, MY_TEMP_OUTLINE, ST7735_WHITE, ST7735_BLACK, 2);
+  drawSymbol(16, 48, MY_TEMP_HIGH, ST7735_RED, ST7735_BLACK, 2);
+
+  drawSymbol(36, 48, MY_TEMP_OUTLINE, ST7735_WHITE, ST7735_BLACK, 2);
+  drawSymbol(36, 48, MY_TEMP_MODERATE, ST7735_GREEN, ST7735_BLACK, 2);
+
+  drawSymbol(56, 48, MY_TEMP_OUTLINE, ST7735_WHITE, ST7735_BLACK, 2);
+  drawSymbol(56, 48, MY_TEMP_LOW, ST7735_BLUE, ST7735_BLACK, 2);
+
+
+  drawSymbol(100, 88, MY_HUMI, ST7735_BLUE, ST7735_BLACK, 1);
+
+  drawSymbol(23, 106, MY_SUNRISE, ST7735_WHITE, ST7735_BLACK, 1);
+  drawSymbol(95, 106, MY_SUNSET, ST7735_WHITE, ST7735_BLACK, 1);
   
   delay(1000);
 }
